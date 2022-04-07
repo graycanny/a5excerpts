@@ -1,0 +1,25 @@
+.Paper {
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  margin: 30px auto;
+}
+
+.textarea {
+  height: 100%;
+  width: 100%;
+  padding: 30px 30px;
+  border: 1px solid #5e5e5e;
+  font-size: 9px;
+  font-family: "Special Elite", cursive;
+  resize: none;
+  outline: none;
+  overflow: none;
+}
+
+.textarea::placeholder {
+  text-align: center;
+  padding-top: 300px;
+}
