@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
+import Modal from "../Modal";
 import style from "./Share.module.css";
 
-function Share() {
+function Share({ text }) {
+  const [show, setShow] = useState(false);
+
   return (
     <div className={style.Share}>
-      <button className={style.btn}>share</button>
+      {show ? <Modal setShow={setShow} /> : <></>}
+      <button onClick={() => setShow(true)} className={style.btn}>
+        share
+      </button>
     </div>
   );
 }

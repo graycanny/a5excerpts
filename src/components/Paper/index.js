@@ -1,11 +1,10 @@
 import React from "react";
 import style from "./Paper.module.css";
 
-function Paper() {
-  //! 138 lines @ font-size 18px
-  //! 75 characters
-
-  const screen = screen.width;
+function Paper({ textArea, setText }) {
+  function onChange(e) {
+    setText(e.target.value);
+  }
 
   return (
     <div className={style.Paper}>
@@ -15,10 +14,11 @@ function Paper() {
             name="paper"
             id="paper"
             placeholder="Enter Text Here"
-            cols="105"
-            rows="102"
+            cols={textArea.cols}
+            rows={textArea.rows}
             className={style.textarea}
-          ></textarea>
+            onChange={(e) => onChange(e)}
+          />
         </div>
       </form>
     </div>
